@@ -1,0 +1,27 @@
+# .understandignore — patterns for files/dirs to exclude from analysis
+# Syntax: same as .gitignore (globs, # comments, ! negation, trailing / for dirs)
+# Lines below are suggestions — uncomment to activate.
+# Use ! prefix to force-include something excluded by defaults.
+#
+# Built-in defaults (always excluded unless negated):
+#   node_modules/, .git/, dist/, build/, obj/, *.lock, *.min.js, etc.
+#
+# --- Test file patterns (uncomment to exclude) ---
+
+# *.test.*
+# *.spec.*
+# *.snap
+
+# Ignore massive 3rd party repos and legacies to speed up analysis
+_Legacy_Archive/
+gbrain/
+gbrain_sources/
+graphify/
+gstack/
+01_Orchestration/n8n-mcp/
+01_Orchestration/windmill/
+02_Premium_UI_Media/ComfyUI/
+03_Search_and_Security/spiderfoot/
+04_Local_AI_Tools/Understand-Anything/
+01_Orchestration/mattpocock-skills/
+
