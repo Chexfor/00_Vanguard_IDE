@@ -32,6 +32,15 @@ graph TD
         B -->|"Circuit Breaker & Fallback"| C
         H["⚡ Worker Asíncrono de Grafos"] -->|"Extracción LLM no bloqueante"| C
     end
+
+    subgraph "Capa 5: Gobernanza Arquitectónica (ADR Standard)"
+        B -->|"Decisions as Code"| I["📐 ADR Engine (record_decision / search_decisions)"]
+        I -->|"Nodos & Aristas de Decisión"| C
+    end
+
+    subgraph "Capa 6: Aislamiento & Sandboxing (NVIDIA NemoClaw)"
+        B -->|"Políticas de Ejecución & Egress"| J["🛡️ OpenShell Sandbox Guardrails"]
+    end
 ```
 
 ---
@@ -58,6 +67,19 @@ graph TD
 ### Pillar 4: Estado Persistente y Monitoreo (LangGraph + AgentOps)
 - Registro persistente de la trayectoria de tareas en SQLite.
 - Auditoría de fallas registradas mediante la herramienta `record_failure` para prevenir antipatrones repetidos.
+
+### Pillar 5: Gobernanza Arquitectónica Viva (ADR Standard)
+- Integrado desde `04_Local_AI_Tools/architecture-decision-record`.
+- **Decisions as Code:** Registro de decisiones de arquitectura con estado (`proposed`, `accepted`, `superseded`) y compensaciones técnicas.
+- **Grafo Sináptico de Decisiones:** Cada ADR se vincula a `vanguard_graph.db` con relaciones `SUPERSEDES`, permitiendo a los agentes razonar sobre por qué se implementó cada subsistema.
+- **MCP Tools:** `record_decision` y `search_decisions`.
+- **Skill de Antigravity:** Activada globalmente en `~/.gemini/config/skills/architecture-decision-record`.
+
+### Pillar 6: Aislamiento & Sandbox Confinado (NVIDIA NemoClaw)
+- Integrado desde `03_Search_and_Security/NemoClaw`.
+- **OpenShell Sandboxing:** Ejecución de agentes (OpenClaw, Hermes, DeepAgents y squads autónomos) en contenedores endurecidos con `CAP_SYS_ADMIN` dropeado y filesystem protegido.
+- **Network Egress Firewall:** Control de tráfico de salida para prevenir fugas de secretos y llamadas no autorizadas.
+- **MCP Tool:** `inspect_sandbox_guardrails` para verificar la postura de seguridad previa a la ejecución.
 
 ---
 

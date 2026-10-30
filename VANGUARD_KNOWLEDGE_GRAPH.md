@@ -13,18 +13,15 @@ Aquí te explico en un solo párrafo conciso qué es, para qué sirve y cómo in
 **Qué es**: ComfyUI es un motor de inteligencia artificial (IA) poderoso y modular para creación de contenido. **Para qué sirve**: Sirve como plataforma para desarrollar aplicaciones con capacidades avanzadas de IA, permitiendo a los desarrolladores crear interfaces de usuario interactivas y personalizables. **Integración en LexSync**: Podríamos integrarlo en LexSync mediante APIs o SDKs proporcionados por ComfyUI, utilizando la biblioteca GSAP (GreenSock Animation Platform) para animaciones y efectos visuales.
 
 ## 🛠️ 03_Search_and_Security
-Aquí te explico en un solo párrafo conciso:
-
-"**¿Qué es Vane?**: Es una motor de preguntas y respuestas centrado en privacidad que utiliza inteligencia artificial. **Para qué sirve**: En un ecosistema de desarrollo, Vane puede ser utilizado como subcomponente para incorporar funcionalidades de búsqueda y seguridad en aplicaciones web. **Integración en LexSync**: Puedes integrarlo en tu app Next.js/Supabase llamada LexSync mediante una API REST o GraphQL que se comunique con el servicio de Docker de Vane, permitiendo a los usuarios realizar búsquedas seguras y privadas dentro de la aplicación."
+- **Vane**: Motor de búsqueda privada con IA (SearxNG + Ollama/Gemini) para respuestas citadas sin rastreo.
+- **NemoClaw (NVIDIA)**: Stack de referencia para la ejecución segura de agentes autónomos (OpenClaw, Hermes, DeepAgents) dentro de sandboxes endurecidos de OpenShell, con cortafuegos de red (egress filtering) e inferencia gestionada para Vanguard-Brain.
 
 ## 🛠️ 04_Local_AI_Tools
-**Análisis del contenido de '04_Local_AI_Tools'**
-
-El subtool **LLM_APPS**, llamado Unwind AI, es una aplicación que utiliza inteligencia artificial para entender y analizar código. **OpenMonoAgent.ai** es un agente de programación abierto que permite ejecutar código localmente sin necesidad de acceso a la nube. La herramienta **Understand-Anything** permite crear gráficos de conocimiento interactivos a partir de bases de código, conocimientos y documentación.
-
-1. **Qué es exactamente**: Son herramientas de inteligencia artificial y automatización de tareas de programación.
-2. **Para qué sirve en un ecosistema de desarrollo**: Facilitan la automatización y el análisis de código, permitiendo a los desarrolladores enfocarse en la lógica del proyecto.
-3. **Cómo integrarlo en una app Next.js/Supabase llamada LexSync**: Pueden ser utilizadas como componentes o plugins para agregar funcionalidades de inteligencia artificial y automatización al proyecto LexSync.
+- **architecture-decision-record (ADR)**: Sistema de registro y gobernanza de decisiones arquitectónicas ("Decisions as Code"), integrado a Vanguard-Brain con las herramientas MCP `record_decision` y `search_decisions`.
+- **spec-kit**: Suite para diseño y especificación técnica asistida por IA.
+- **Understand-Anything**: Generador de grafos de conocimiento interactivos a partir de código fuente.
+- **OpenMonoAgent.ai**: Entorno local para agentes de programación mono-repositorio.
+- **token-optimizer**: Optimización y compresión de ventanas de contexto para LLMs.
 
 ## 🛠️ gbrain
 Aquí te explico en un solo párrafo conciso:
